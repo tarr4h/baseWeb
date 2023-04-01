@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tar.web.board.dao.BoardDao">
+
+	<insert id="regBoard" parameterType="com.tar.web.vo.BoardVo">
+		insert into board values(#{writer}, #{content}, #{contact}, now(), #{title}, #{seq})
+	</insert>
+	
+	<select id="getBoard" parameterType="map" resultType="com.tar.web.vo.BoardVo">
+		select
+			title,
+			content,
+			writer,
+			contact,
+			reg_date,
+			seq
+		from
+			board
+		<if test="seqList != null">
+			where
+			    seq in
+			<foreach collection="seqList" item="item" separator="," open="(" close=")">
+				#{item.seq}
+			</foreach>
+		</if>
+		<if test="seq != null">
+			where
+				seq = #{seq}
+		</if>
+		order by
+			reg_date desc
+	</select>
+	
+	<select id="getTotalBoardCount" resultType="int">
+		select
+			count(*)
+		from
+			board
+		<if test="seqList != null">
+			where
+			seq in
+			<foreach collection="seqList" item="item" separator="," open="(" close=")">
+				#{item.seq}
+			</foreach>
+		</if>
+	</select>
+
+	<update id="updateBoard" parameterType="com.tar.web.vo.BoardVo">
+		update
+			board
+		set
+		    writer = #{writer},
+		    content = #{content},
+		    contact = #{contact},
+		    title = #{title}
+		where
+		    seq = #{seq}
+	</update>
+
+	<insert id="saveFile">
+		insert into file
+		values
+		<foreach collection="fileList" item="item" separator=",">
+			(#{item.seq}, #{item.ofn}, #{item.rfn}, #{item.fileSize}, #{item.filePath})
+		</foreach>
+	</insert>
+
+	<select id="getFileList" resultType="map">
+		select
+		    *
+		from
+		    file
+		where
+		    seq = #{seq}
+	</select>
+
+	<select id="getFile" resultType="map">
+		select
+			*
+		from
+			file
+		where
+			seq = #{seq}
+			and
+			renamed_filename = #{rfn}
+	</select>
+
+	<delete id="deleteFile">
+		delete from file
+		where
+		    seq = #{seq}
+			and
+		    renamed_filename = #{renamed_filename}
+	</delete>
+
+	<select id="searchBoard" resultType="com.tar.web.vo.BoardVo">
+		select
+		    *
+		from
+		    board
+		where
+			contact = #{num}
+	</select>
+
+	<insert id="insertReply">
+		insert into reply values(
+			#{seq}, #{replyContent}, now()
+		)
+	</insert>
+	
+	<select id="getReply" resultType="com.tar.web.vo.ReplyVo">
+		select
+		    *
+		from
+		    reply
+		where
+		    seq = #{seq}
+	</select>
+</mapper>

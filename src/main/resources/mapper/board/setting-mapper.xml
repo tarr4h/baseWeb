@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tar.web.board.dao.SettingDao">
+
+	<select id="getPh" resultType="map">
+		select
+			*
+		from
+			setting_ph
+	</select>
+
+	<select id="pwdChecker" resultType="map">
+		select
+		    *
+		from
+		    setting
+		where
+		    set_key = 'adminPwd'
+			and
+		    set_val = #{pwd}
+	</select>
+
+	<select id="getPhInfo" resultType="map">
+		select
+		    *
+		from
+		    setting_ph
+	</select>
+
+	<update id="updatePh">
+		update
+			setting_ph
+		set
+		    ph = #{ph}
+		where
+		    target = #{target}
+	</update>
+
+	<select id="chkAdmin" resultType="int">
+		select
+		    count(*)
+		from
+		    setting
+		where
+		    set_key = 'adminPwd'
+			and
+		    set_val = #{pwd}
+	</select>
+</mapper>

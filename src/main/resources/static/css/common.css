@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+/* bootstrap */
+button.navbar-toggler{
+    border:none;
+}
+.bg-tar-colorize{
+    background-color: black;
+}
+.nav-link{
+    color:white!important;
+}
+
+/* document */
+html{
+    background-color: white;
+}
+body{
+    background-color: #1C1018;
+}
+
+section{
+    min-height:1em;
+}
+
+/* font */
+span, p, h1, h2, h3, div, a{
+    font-family: 'Gothic A1', sans-serif;
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    /* font-family: 'Nanum Pen Script', cursive; */
+}
+
+/* 400 700 800 */
+.font-bold1{
+    font-weight: 700;
+}
+
+.blSp{
+    display:block;
+    color:white;
+}
+.blSp.tit{
+    font-weight:bold;
+    font-size:1.3em;
+}
+.blSp.cont{
+    margin-top: 15px;
+    font-weight: 200;
+}
+.content-icon{
+    width: 3.5em;
+    height:100%;
+    float:left;
+    margin-right:20px;
+}
+
+/* key visual */
+.key-title {
+    margin-bottom: 1.5em;
+}
+.key-title h3{
+    font-size: 2.2rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+
+
+.label_bg_lightBlue{
+    background-color: #78aedf;
+}
+.label_bg_semilightBlue{
+    background-color: #507DBC;
+}
+
+.descriptBtn{
+    background-color: #FFF;
+    border: 2px solid black;
+    height: 2.5em;
+    margin-top: 0.8em;
+    font-size: 0.9em;
+    width: 15em;
+}
+
+/* page content */
+.pageContent{
+    width: 100%;
+}
+
+/* content */
+.content-title h2{
+    font-weight: 600;
+}
+
+.contentImg img{
+    height: 20vh;
+}
+
+/* color */
+.color-gray1{
+    color:#6e6e6ee0;
+}
+.color-white{
+    color: #FFF;
+}
+.color-yellow1{
+    color: #FEFFDE;
+}
+.color-lightgreen1{
+    color: #DDFFBC;
+}
+.color-lightgreen2{
+    color: #91C788;
+}
+.color-blue1{
+    color: #041C32;
+}
+.color-darkgreen1{
+    color: #04293A;
+}
+.color-lightblue1{
+    color: #064663;
+}
+
+
+/* bg color */
+.bg-black{
+    background-color: black;
+}
+.bg-black1{
+    background-color: rgb(35, 34, 34);
+}
+.bg-blue1{
+    background-color:#041C32;
+}
+.bg-darkgreen1{
+    background-color:#04293A;
+}
+.bg-lightblue1{
+    background-color:#064663;
+}
+.bg-white{
+    background-color: #FFF;
+}
+
+.bd-white{
+    border-color: white;
+}
+
+.vhd{
+    visibility: hidden;
+}
+.mg-0{
+    margin: 0!important;
+}
+.mt-0{
+    margin-top: 0;
+}
+
+/* explain */
+.explain{
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+.explainTxt{
+    display:inline-block;
+    font-size: 1em;
+    font-weight: 200;
+}
+.dotBox{
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+}
+.listDot{
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 10em;
+    background-color: #b9a5c8;
+}
+
+/* icon */
+.iconBox{
+    display:inline;
+}
+.it-icon{
+    /*filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(269deg) brightness(101%) contrast(104%);*/
+    width: 1em;
+    margin-right: 1em;
+}
+
+/* board Form */
+.regPage{
+    width: 100%;
+    min-height: 5em;
+    padding: 10vh 0.5em 0.5em;
+    margin-bottom: 4em;
+}
+
+#regTable th,td{
+    border-bottom: 1px solid #94949421;
+}
+#regTable tbody th{
+    text-align: center;
+    background-color: #b6c6e238;
+    font-weight: 500;
+    border-right: 1px solid #94949421;
+    height: 35px;
+}
+
+.frmInput{
+    width: 100%;
+    height: 3em;
+    border: none;
+    padding-left: 10px;
+}
+.frmInput[name = upFile]{
+    padding: 0.5em;
+}
+.fileInput{
+    padding-top: 0.7em;
+}
+

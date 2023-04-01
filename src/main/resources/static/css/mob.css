@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/*mob*/
+@media (max-width: 991px){
+    /* key visual */
+    .keyImg{
+        height: 90vh;
+        background-color: black;
+        overflow: hidden;
+        text-align:center;
+        /*background-image: url("/static/img/dog_sy.JPG");*/
+        /*background-image: url("/static/img/machine.png");*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .keyImgTxtBox{
+        color: white;
+        margin-bottom: 5.8em;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .keyVisual{
+        width: 100%;
+        min-height: 80vh;
+        max-height: 100vh;
+        padding: 15vh 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #80808021;
+    }
+    .key-title h1{
+        font-size: 2.7rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+    .labelBox{
+        width: 1.5em;
+        height: 2.3em;
+        display: inline-block;
+    }
+    .hdLabel{
+        width: 0.5em;
+        height: 100%;
+    }
+    .key-img{
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+    .key-img img{
+        height: 30vh;
+    }
+    .key-text{
+        margin-top: 2em;
+    }
+    .key-text p{
+        font-size: 1.1em;
+    }
+
+    /* content */
+    .content{
+        display: flex;
+        min-height: 19em;
+        justify-content: flex-start;
+        align-items: center;
+        border-top: 1px solid #ffffff8f;
+        flex-direction: column;
+        padding-top: 3.5em;
+    }
+
+    .page-content{
+        padding: 4em 1.9em;
+        border-bottom: 1px solid white;
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .pg-lg{
+        min-height: 80vh;
+    }
+
+    .pg-sm{
+        min-height: 50vh;
+    }
+
+    .contentImg{
+        text-align: center;
+    }
+
+    .contentTit{
+        font-size: 2rem;
+        margin-bottom: 1em;
+        font-weight: 800;
+    }
+    .descriptBtn{
+        background-color: #FFF;
+        border: 1px solid black;
+        height: 2.5em;
+        margin-top: 0.8em;
+        font-size: 0.7em;
+        width: 15em;
+    }
+
+    .content-text{
+        width: 100%;
+        padding-top:0.5em;
+        padding-left: 1em;
+        padding-right: 0.5em;
+    }
+
+    .innerContent{
+        width:100%;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* qna Title*/
+    .qna.titleArea{
+        width: 80%;
+        margin: auto;
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+
+    #regTable{
+        width:100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        font-size: 0.7em;
+        border: 1px solid #9494945c;
+    }
+
+    .frmTextArea{
+        width: 100%;
+        border: none;
+        padding: 10px;
+        height: 20em;
+        resize: none;
+    }
+
+    .frmSubmitBtn{
+        width: 100%;
+        border: none;
+        height: 3.5em;
+        color: black;
+        background-color: #80808040;
+    }
+
+    .pd-0{
+        padding: 0!important;
+    }
+
+    /* color */
+    .color-gray1{
+        color:#6e6e6ee0;
+    }
+    .color-white{
+        color: #FFF;
+    }
+    .color-black{
+        color: black;
+    }
+    .color-yellow1{
+        color: #FEFFDE;
+    }
+    .color-lightgreen1{
+        color: #DDFFBC;
+    }
+    .color-lightgreen2{
+        color: #91C788;
+    }
+    .color-blue1{
+        color: #041C32;
+    }
+    .color-darkgreen1{
+        color: #04293A;
+    }
+    .color-lightblue1{
+        color: #064663;
+    }
+
+    /* bg color */
+    .bg-black{
+        background-color: black;
+    }
+    .bg-black1{
+        background-color: rgb(35, 34, 34);
+    }
+    .bg-blue1{
+        background-color:#041C32;
+    }
+    .bg-darkgreen1{
+        background-color:#04293A;
+    }
+    .bg-lightblue1{
+        background-color:#064663;
+    }
+    .bg-white{
+        background-color: #FFF;
+    }
+
+    .bd-white{
+        border-color: white;
+    }
+
+
+
+
+
+
+
+
+}
