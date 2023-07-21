@@ -61,7 +61,7 @@
 <header>
 	<div class="container-fluid p-0">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-tar-colorize fixed-top py-3 custom-hd-height">
-		  <a class="navbar-brand text-light font-bold1" href="<c:url value='/' />">HANSOL C&C</a>
+		  <a class="navbar-brand text-light font-bold1" href="<c:url value='/' />">한솔 C&C</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon text-light"></span>
 		  </button>
@@ -72,14 +72,14 @@
 		        	active
 	          </c:if>
 		      ">
-		        <a class="nav-link" href="${pageContext.request.contextPath}/board/page?param=board/board1">INTRODUCE</a>
+		        <a class="nav-link" href="${pageContext.request.contextPath}/board/page?param=board/board1">회사소개</a>
 		      </li>
 		      <li class="nav-item board2
 		      <c:if test="${page.equals('board/board2') }">
 		        	active
 	          </c:if>
 		      ">
-		        <a class="nav-link" href="<c:url value='/board/page?param=board/board2'/>">GUIDANCE</a>
+		        <a class="nav-link" href="<c:url value='/board/page?param=board/board2'/>">서비스안내</a>
 		      </li>
 			  <li class="nav-item
 			  <c:if test="${page.equals('board/qnaBoard') }">
@@ -93,7 +93,7 @@
 		        	active
 	          </c:if>
 			  ">
-				<a class="nav-link" href="<c:url value='/board/page?param=board/boardMain'/>">CONTACT-US</a>
+				<a class="nav-link" href="<c:url value='/board/page?param=board/boardMain'/>">오시는길</a>
 			  </li>
 		    </ul>
 		  </div>

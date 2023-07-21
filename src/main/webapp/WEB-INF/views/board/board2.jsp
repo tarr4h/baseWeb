@@ -12,15 +12,18 @@
             <div class="labelBox">
                 <div class="hdLabel label_bg_semilightBlue"></div>
             </div>
-            <h1>Service</h1>
+            <h1>서비스 안내</h1>
         </div>
         <div class="key-img">
             <img src="<c:url value='/static/img/img1/hands.png' />" alt="">
         </div>
         <div class="key-text color-gray1">
             <p>
-                안내합니다. 모두는 고된 노동에서 자유로워져야 한다. 지구는 둥글고 우리 세탁기 입구도 둥글다.
+                * 가능지역
             </p>
+            <p>경기 파주시, 김포시, 고양시
+                <br/>인천광역시, 경기도 양주시, 의정부시</p>
+            <p> - 그 외 지역은 문의 부탁드립니다.</p>
         </div>
     </div>
     
@@ -35,13 +38,10 @@
                     <span>무엇을 취급하나요?</span>
                 </div>
                 <p>
-                    구겨지고 더럽혀진 하얀 이불, 땀에 젖어 소금기가 도는 옷,
+                    저희 한솔C&C는 요양시설만을 취급하며
                 </p>
                 <p>
-                    도통 세탁기에 들어가지 않아 손빨래를 고민하는 무지하게 큰 옷들.
-                </p>
-                <p>
-                    우리는 마구마구 세탁해버립니다.
+                    보다 전문적인 서비스를 제공합니다.
                 </p>
                 <button class="descriptBtn color-black">서비스 제공 품목 상세보기</button>
             </div>
@@ -86,9 +86,6 @@
                 </p>
                 <p>
                     하단 버튼을 통해 전화 또는 문의글 작성이 가능합니다.
-                </p>
-                <p>
-                    - 저는 외롭습니다.
                 </p>
                 <button class="descriptBtn color-black">문의하러 가기</button>
             </div>

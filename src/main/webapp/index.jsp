@@ -22,17 +22,17 @@
 				<div class="content-icon">
 					<img src="<c:url value='/static/icon/index/color/idea.png' />" alt="" style="width:100%;"/>
 				</div>
-				<span class="blSp tit">한솔만의 특별함</span>
+				<span class="blSp tit">요양시설 세탁전문</span>
 			</div>
 			<div class="content-text wd-lg">
 				<span class="blSp cont">
-					- 저는 세탁 장인입니다.
+					- 침구류 및 의류 전문세탁
 				</span>						
 				<span class="blSp cont">
-					- 우주는 넓고 한솔의 기술은 끝이없다.
+					- 전문화된 세탁시설 및 공정
 				</span>
 				<span class="blSp cont">
-					- 특별한 날에는 흰색 와이셔츠를 입어보세요
+					- 다년간의 노하우
 				</span>
 			</div>
 		</div>
@@ -43,17 +43,17 @@
 				<div class="content-icon">
 					<img src="<c:url value='/static/icon/index/color/trust.png' />" alt="" style="width:100%;"/>
 				</div>
-				<span class="blSp tit">믿음에 증명합니다.</span>
+				<span class="blSp tit">한솔C&C만의 특별함</span>
 			</div>
 			<div class="content-text wd-lg">
 				<span class="blSp cont">
-					- 믿음, 소망, 사랑 그 중 제일은 믿음입니다.
+					- 자극적이지 않은 세제사용
 				</span>				
 				<span class="blSp cont">
-					- 과연 진짜일까요?
+					- 섬유 유해성분 제거에 탁월한 고온살균처리
 				</span>
 				<span class="blSp cont">
-					- 증명해 보이겠습니다.
+					- 세탁물 수거에서 배송까지 특별한 서비스
 				</span>
 			</div>
 		</div>
@@ -64,17 +64,17 @@
 				<div class="content-icon">
 					<img src="<c:url value='/static/icon/index/color/growth.png' />" alt="" style="width:100%;"/>
 				</div>
-				<span class="blSp tit">효율이 증대됩니다.</span>
+				<span class="blSp tit">공정 작업단계</span>
 			</div>
 			<div class="content-text wd-lg">
 				<span class="blSp cont">
-					- 가파른 산비탈을 오르는 호랑이
+					1. 세탁물 수거 및 분류
 				</span>					
 				<span class="blSp cont">
-					- 사자는 오르지 못합니다.
+					2. 클리닝 및 고온살균건조
 				</span>
 				<span class="blSp cont">
-					- 이것은 사실입니다.(아마도)
+					3. 밴딩 및 패킹 후 배송
 				</span>
 			</div>
 		</div>

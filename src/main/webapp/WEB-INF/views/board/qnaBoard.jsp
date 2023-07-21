@@ -148,19 +148,19 @@
             <div class="labelBox">
                 <div class="hdLabel label_bg_semilightBlue"></div>
             </div>
-            <h1>Reference</h1>
+            <h1>1:1 문의</h1>
         </div>
         <div class="explain">
             <div class="dotBox">
                 <div class="listDot"></div>
             </div>
-            <span class="explainTxt">견적 등등 문의 남겨주세요.</span>
+            <span class="explainTxt">견적 등 문의를 남겨주세요.</span>
         </div>
         <div class="explain">
             <div class="dotBox">
                 <div class="listDot"></div>
             </div>
-            <span class="explainTxt">확인하는데 좀 걸려요</span>
+            <span class="explainTxt">답변 후 문자로 안내드립니다.</span>
         </div>
         <button id="regBoard" onclick="regBoard();">등록하기</button>
     </div>
@@ -202,7 +202,6 @@
 
     function searchBoard(){
         let num = $('#searchVal').val();
-        console.log('num = ', num);
 
         if(num == ""){
             srchSeqList = null;
@@ -291,8 +290,6 @@
                 seqList
             }),
             success(res){
-                console.log(res);
-                console.log(res.length);
                 let pageBlock = (page - 1) * 5; //
                 $.each(res, (i, e) => {
                     let no = pageBlock + i + 1;
@@ -304,12 +301,19 @@
                     let thisDate = date.getDate() < 10 ? `0\${date.getDate()}` : date.getDate();
                     let dateForm = `\${thisYear}/\${thisMonth}/\${thisDate}`;
 
+                    const name = e.writer;
+                    const lastName = name.substr(0, 1);
+                    const firstName = name.substr(1);
+
+                    // 성 부분과 '*'를 합쳐서 새로운 이름을 생성합니다.
+                    const hiddenLastName = lastName + '*'.repeat(name.length - 1);
+
                     let tr = `
                         <tr onclick="showRegistered('\${e.seq}');">
                             <td>
                                 <div class="boardRow">
                                     <div class="bd_cont bd_title">\${e.title}</div>
-                                    <div class="bd_cont bd_author">\${e.writer}</div>
+                                    <div class="bd_cont bd_author">\${hiddenLastName}</div>
                                     <div class="bd_cont bd_reg_dt">\${dateForm}</div>
                                 </div>
                             </td>
