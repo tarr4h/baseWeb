@@ -79,9 +79,9 @@
 <div class="companyInfo">
     <div class="infoTxt">
         <span class="compTxt compTit">Hansol C&C Corporation</span>
-        <span class="compTxt">사업자번호 : 12341234</span>
+        <span class="compTxt">사업자번호 : 251-88-01212</span>
         <span class="compTxt">대표 : 박종훈</span>
-        <span class="compTxt">주소 : 경기 파주시 월롱산로 49-9</span>
+        <span class="compTxt">주소 : 경기 파주시 월롱산로 49-52</span>
         <span class="compTxt" style="margin-top:0.5em;">copyrightⓒ2022 All rights reserved by tarr4h</span>
     </div>
     <button class="qnaBtn" onclick="locateQna();">문의하기</button>
