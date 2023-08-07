@@ -6,123 +6,76 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <jsp:include page="/WEB-INF/views/comm/header.jsp"/>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<!-- kakao script  -->
-<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<!-- kakaomap api -->
+<script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a77e005ce8027e5f3a8ae1b650cc6e09&libraries=services"></script>
 
 
+<div class="content">
+    <div class="keyVisual">
+        <div class="key-title">
+            <div class="labelBox">
+                <div class="hdLabel label_bg_semilightBlue"></div>
+            </div>
+            <h1>오시는길</h1>
+        </div>
+        <div id="map"></div>
+        <div class="key-text color-gray1">
+            <p>* 경기 파주시 월롱산로 49-52</p>
+            <img class="mapIco" onclick="toTmap()" src="<c:url value='/static/img/tmap_ico.png' />" alt="">
+            <img class="mapIco" onclick="toNaverMap()" src="<c:url value='/static/img/nmap_ico.png' />" alt="">
+            <img class="mapIco" onclick="toKakaoMap()" src="<c:url value='/static/img/kmap_ico.png' />" alt="">
+        </div>
+    </div>
+</div>
 
-<label for="bTitle">연락처를 입력하세요</label>
-
-
-<input type="text" name="" id="bTitle" />
-<input type="button" value="문의 접수" onclick="regBoard();"/>
-<br />
-<br />
-<button id="kakaoLogin" onclick="kakaoLogin();">카카오로그인</button>
-<br />
-<button id="kakao" onclick="kakaoRequest();">카카오 메시지 전송</button>
-<br />
-<br />
-<br />
-<button id="kakaoFr" onclick="getKakaoFriends()">친구목록</button>
 
 <script>
-	$(() => {
-		Kakao.init('a77e005ce8027e5f3a8ae1b650cc6e09');
-		console.log(Kakao.isInitialized());
-		kakaoLogin();
-	})
-	
-	function getKakaoFriends(){
-		Kakao.API.request({
-			url : '/v1/api/talk/friends',
-			success : function(res){
-				console.log(res);
-			}
-		})
-	}
-	//jh67952 naver
-	//rmstkd12!
-	//8601!
-	
-	function kakaoLogin(){
-		Kakao.Auth.login({
-			scope: 'talk_message, friends',
-			success: function(res){
-				var token = Kakao.Auth.getAccessToken();
-				console.log(token);
-				Kakao.Auth.setAccessToken(token);
-				Kakao.API.request({
-					url: '/v2/user/me',
-					success : function(res){
-						console.log(res);
-					},
-					fail : function(err) {
-						console.log(err)
-					}
-				})
-			},
-			fail : function(err){
-				console.log(err)
-			}
-		})
-	}
-	
-	function kakaoRequest(){
-		Kakao.API.request({
-			  url: '/v1/api/talk/friends/message/default/send',
-			  data: {
-				receiver_uuids: ["aFFoUWNSYFBmSnhNfkd1RHRAcl5oUWZTY1oB"],
-			    template_object: {
-			      object_type: 'feed',
-			      content: {
-			        title: 'test',
-			        description: 'test',
-			        image_url:
-			          'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-			        link: {
-			          web_url: 'https://developers.kakao.com',
-			          mobile_web_url: 'https://developers.kakao.com',
-			        },
-			      },
-			      
-			      button_title: '바로 확인',
-			    },
-			  },
-			  success: function(response) {
-			    console.log(response);
-			  },
-			  fail: function(error) {
-			    console.log(error);
-			  },
-			});
-	}
+    const lat = '37.7788319692414';
+    const lng = '126.76319773548582';
+    $(() => {
+
+        let mapContainer = document.getElementById('map'),
+            mapOption = {
+                center : new kakao.maps.LatLng(lat, lng),
+                level : 3
+            };
+
+        let map = new kakao.maps.Map(mapContainer, mapOption);
 
 
-	function regBoard(){
-		var title = $("#bTitle").val();
-		console.log(title);
-		
-		$.ajax({
-			url: '${pageContext.request.contextPath}/board/regBoard',
-			method: 'POST',
-			data:{
-				title : title
-			},
-			success(res){
-				console.log(res)
-			},
-			error: console.log
-		})
-	}
+        let markerPosition = new kakao.maps.LatLng(lat, lng);
+        marker = new kakao.maps.Marker({
+            position: markerPosition,
+        });
 
+        let iwContent = '<div class="iwContent">한솔C&C</div>';
+        let customOverlay = new kakao.maps.CustomOverlay({
+            position : markerPosition,
+            content : iwContent,
+            xAnchor : 0.51,
+            yAnchor : 2.6
+        });
+
+        marker.setMap(map);
+        customOverlay.setMap(map);
+    });
+
+    function toTmap(){
+        url = `tmap://route?goalname=한솔씨앤씨&goalx=\${lng}&goaly=\${lat}`;
+        location.href = url;
+    }
+
+    function toNaverMap(){
+        url = `nmap://place?lat=\${lat}&lng=\${lng}&name=한솔씨앤씨`;
+        location.href = url;
+    }
+
+    function toKakaoMap(){
+        url = `kakaomap://look?q=한솔씨앤씨&p=\${lat},\${lng}`;
+        location.href = url;
+    }
 </script>
-
-
-
-
-
-
 
 
 

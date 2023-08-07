@@ -193,7 +193,7 @@
         <c:if test="${(auth == false) || (board.reply.content != null)}">
             <div class="replyArea">
                 <div class="replyTit">답변</div>
-                <textarea name="" class="replyContent" cols="30" rows="5">${board.reply.content != null ? board.reply.content : "답변 대기중입니다."}</textarea>
+                <textarea name="" class="replyContent" cols="30" rows="5" disabled>${board.reply.content != null ? board.reply.content : "답변 대기중입니다."}</textarea>
             </div>
             <c:if test="${auth == true}">
                 <input type="button" class="replySubmitBtn" value="sms전송" onclick="sendSms();">

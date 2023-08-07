@@ -13,12 +13,6 @@
         padding-top: 10vh;
     }
 
-    .boardArea{
-        width:90%;
-        min-height: 5em;
-        margin: auto;
-    }
-
     #regBoard{
         display: block;
         width: 100%;

@@ -244,4 +244,39 @@
         border-color: white;
     }
 
+    #map{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .iwContent{
+        width: 5vw;
+        height: 3vh;
+        background-color: #24232B;
+        color: #F2F2F2;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        border-radius: 0.5em;
+        font-weight: 500;
+        border: 1px solid #8f8f8f;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .iwContent span{
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .boardArea{
+        width:90%;
+        min-height: 46vh;
+        margin: auto;
+    }
+
+    .mapIco{
+        display: none;
+    }
 }
