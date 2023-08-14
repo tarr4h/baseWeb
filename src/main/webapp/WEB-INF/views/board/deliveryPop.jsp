@@ -13,21 +13,46 @@
         width: 100%;
         border-collapse: collapse;
     }
-    th, td{
-        border: 1px solid #F2F2F2;
-        text-align: center;
-        font-family: 'Gothic A1', sans-serif;
-        color: #FFF;
+    @media (max-width: 991px) {
+        th, td{
+            border: 1px solid #F2F2F2;
+            text-align: center;
+            font-family: 'Gothic A1', sans-serif;
+            color: #FFF;
+        }
+        thead th{
+            height: 9vh;
+            font-size: 3em;
+        }
+        tbody th, td{
+            font-size: 2.5em;
+        }
+        tbody td{
+            height: 7vh;
+        }
+        span{
+            color: #FFF;
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 2em;
+        }
     }
-    thead th{
-        height: 9vh;
-    }
-    tbody td{
-        height: 7vh;
-    }
-    span{
-        color: #FFF;
-        font-family: 'Gothic A1', sans-serif;
+    @media (min-width: 992px) {
+        th, td{
+            border: 1px solid #F2F2F2;
+            text-align: center;
+            font-family: 'Gothic A1', sans-serif;
+            color: #FFF;
+        }
+        thead th{
+            height: 9vh;
+        }
+        tbody td{
+            height: 7vh;
+        }
+        span{
+            color: #FFF;
+            font-family: 'Gothic A1', sans-serif;
+        }
     }
 
 </style>
