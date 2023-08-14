@@ -12,7 +12,7 @@
             <div class="labelBox" style="height: 2em">
                 <div class="hdLabel label_bg_semilightBlue"></div>
             </div>
-            <h3>Register</h3>
+            <h3>문의 등록하기</h3>
         </div>
         <div class="explain">
             <div class="dotBox">

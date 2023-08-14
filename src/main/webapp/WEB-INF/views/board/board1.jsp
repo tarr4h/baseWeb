@@ -14,6 +14,9 @@
             </div>
             <h1>회사소개</h1>
         </div>
+        <div class="key-img">
+            <img src="<c:url value='/static/img/board1-direct.jpg' />" alt="">
+        </div>
         <div class="key-text color-gray1">
             <p>저희 한솔 C&C 홈페이지를 찾아주신 모든 파트너분들께 감사드립니다.</p>
             <p>다년간의 경험에서 발전된 기술, 그로부터 나오는 안전하고 깨끗한 서비스를 제공합니다.</p>

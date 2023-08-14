@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<div class="contentBox">
-	<div class="content bg-black1">
+	<div class="content main bg-black1">
 		<div class="innerContent">
 			<div class="innerContent header">
 				<div class="content-icon">
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content bg-darkgreen1">
+	<div class="content main bg-darkgreen1">
 		<div class="innerContent">
 			<div class="innerContent header">
 				<div class="content-icon">
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content bg-lightblue1">
+	<div class="content main bg-lightblue1">
 		<div class="innerContent">
 			<div class="innerContent header">
 				<div class="content-icon">

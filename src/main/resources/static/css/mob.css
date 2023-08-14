@@ -7,17 +7,18 @@
         background-color: black;
         overflow: hidden;
         text-align:center;
-        background-image: url("/static/img/drum.jpeg");
-        /*background-image: url("/static/img/machine.png");*/
+        background-image: url("/static/img/main-siblings-mob.jpg");
+        /*background-image: url("/static/img/main-hang.jpg");*/
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         display: flex;
         flex-direction: column-reverse;
     }
     .keyImgTxtBox{
         color: white;
-        margin-bottom: 2.8em;
+        /*margin-bottom: 56vh;*/
+        margin-bottom: 3.5em;
         font-size: 1.5rem;
         font-weight: 700;
         font-style: italic;
@@ -50,6 +51,7 @@
     .key-img{
         width: 100%;
         margin-bottom: 1.5em;
+        overflow: hidden;
     }
     .key-img img{
         height: 30vh;

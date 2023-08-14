@@ -24,7 +24,7 @@ section{
 }
 
 /* font */
-span, p, h1, h2, h3, div, a{
+span, p, h1, h2, h3, div, a, th, td{
     font-family: 'Gothic A1', sans-serif;
     /* font-family: 'Nanum Gothic', sans-serif; */
     /* font-family: 'Nanum Pen Script', cursive; */

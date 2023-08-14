@@ -19,11 +19,8 @@
         </div>
         <div class="key-text color-gray1">
             <p>
-                * 가능지역
+                신뢰할 수 있는 요양원 세탁 파트너로써, 깨끗하고 위생적인 환경을 제공합니다.
             </p>
-            <p>경기 파주시, 김포시, 고양시
-                <br/>인천광역시, 경기도 양주시, 의정부시</p>
-            <p> - 그 외 지역은 문의 부탁드립니다.</p>
         </div>
     </div>
     
@@ -43,7 +40,9 @@
                 <p>
                     보다 전문적인 서비스를 제공합니다.
                 </p>
-                <button class="descriptBtn color-black">서비스 제공 품목 상세보기</button>
+                <button class="descriptBtn color-black"
+                        onclick="what2care();"
+                >서비스 제공 품목 상세보기</button>
             </div>
         </div>
 
@@ -65,7 +64,9 @@
                 <p>
                     - 종타리아, 미지의 세계를 향해.
                 </p>
-                <button class="descriptBtn bg-black color-white bd-white">배송 가능지역 보기</button>
+                <button class="descriptBtn bg-black color-white bd-white"
+                        onclick="openPop()"
+                >배송 가능지역 보기</button>
             </div>
         </div>
 
@@ -87,7 +88,9 @@
                 <p>
                     하단 버튼을 통해 전화 또는 문의글 작성이 가능합니다.
                 </p>
-                <button class="descriptBtn color-black">문의하러 가기</button>
+                <button class="descriptBtn color-black"
+                        onclick="locateQna()"
+                >문의하러 가기</button>
             </div>
         </div>
     </div>
@@ -105,7 +108,20 @@
         } else {
             $target.hide();
         }
-    };
+    }
+
+    function openPop(){
+        let url = '${pageContext.request.contextPath}/board/deliveryPop';
+        window.open(url, '배송가능지역', "width=600,height=600, top=250, left=400, right=400");
+    }
+
+    function locateQna(){
+        location.href = "<c:url value='/board/page?param=board/qnaBoard'/>";
+    }
+
+    function what2care(){
+        alert('준비중입니다.\n자세한 내용은 문의를 통해 부탁드립니다.');
+    }
 
     function scrollBottom(id){
         let targetHeight = $(`#\${id}`).height();

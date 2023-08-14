@@ -98,6 +98,11 @@ public class BoardController {
 		return "/counsel/registered";
 	}
 
+	@GetMapping("/deliveryPop")
+	public String deliveryPop(@RequestParam Map<String, Object> param){
+		return "/board/deliveryPop";
+	}
+
 	@PostMapping("/validateNumber")
 	public ResponseEntity<?> validateNumber(@RequestBody Map<String, Object> param){
 		return ResponseEntity.ok(service.validateNumber(param));
