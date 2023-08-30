@@ -44,7 +44,7 @@ public class SettingController {
 
 		Map<String, Object> checkResult = service.pwdChecker(param);
 
-		if((boolean) checkResult.get("result") == true){
+		if((boolean) checkResult.get("result")){
 			List<Map<String, Object>> phInfo = service.getPhInfo();
 			log.debug("phInfo : {}", phInfo);
 			model.addAttribute("phInfo", phInfo);
@@ -73,7 +73,7 @@ public class SettingController {
 		HttpSession session = hsr.getSession();
 		log.debug("session = {}", session.getAttribute("auth"));
 
-		if(service.setAdmin(param) == true){
+		if(service.setAdmin(param)){
 			session.setAttribute("auth", "admin");
 			return ResponseEntity.ok(true);
 		} else {
