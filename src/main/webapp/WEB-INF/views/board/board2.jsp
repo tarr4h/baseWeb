@@ -53,20 +53,19 @@
             </div>
             <div class="content-text">
                 <div class="contentTit">
-                    <span>이렇게 배송합니다.</span>
+                    <span>배송가능지역</span>
                 </div>
                 <p>
-                    졸린 새벽, 교통 체증, 울퉁불퉁한 길.
+                    - 파주시, 김포시, 고양시<br/>
+                    - 양주시, 의정부시<br/>
+                    - 인천광역시
                 </p>
                 <p>
-                    그 무엇도 우리의 배송을 막을 순 없을 것입니다.
+                    * 그 외 지역은 문의 부탁 드립니다.
                 </p>
-                <p>
-                    - 종타리아, 미지의 세계를 향해.
-                </p>
-                <button class="descriptBtn bg-black color-white bd-white"
-                        onclick="openPop()"
-                >배송 가능지역 보기</button>
+<%--                <button class="descriptBtn bg-black color-white bd-white"--%>
+<%--                        onclick="openPop()"--%>
+<%--                >배송 가능지역 보기</button>--%>
             </div>
         </div>
 
