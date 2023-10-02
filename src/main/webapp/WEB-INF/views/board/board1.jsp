@@ -34,7 +34,7 @@
                 <p>체계적인 서비스</p>
             </div>
             <div class="content-text pd-0">
-                <p>저희 한솔C&C는 20년간의 세탁경험을 토대로, 전문화된 공정과 체계화된 프로세스를 통해 깨끗한 세탁을 약속드립니다.</p>
+                <p>저희 한솔C&C는 다년간의 세탁경험을 토대로, 전문화된 공정과 체계화된 프로세스를 통해 깨끗한 세탁을 약속드립니다.</p>
             </div>
         </div>
         <div class="page-content pg-lg pc-flex-col-rev">
