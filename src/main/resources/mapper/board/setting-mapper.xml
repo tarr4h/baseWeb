@@ -48,4 +48,31 @@
 			and
 		    set_val = #{pwd}
 	</select>
+
+	<select id="selectTodayAccess" resultType="int">
+		select	count(*)
+		from	access_ip
+		where	ip_addr = #{ip}
+			and access_dt = str_to_date(now(), '%Y-%m-%d')
+	</select>
+
+	<insert id="insertAccessIp">
+		insert into access_ip
+		values (
+		        #{ip}
+		    ,	now()
+		)
+	</insert>
+
+	<update id="updateAccessIp">
+		update  access_ip
+		set		access_dt = now()
+		where	ip_addr = #{ip}
+	</update>
+
+	<select id="getAccessCnt" resultType="int">
+		select	count(*)
+		from	access_ip
+		where	access_dt = str_to_date(now(), '%Y-%m-%d')
+	</select>
 </mapper>

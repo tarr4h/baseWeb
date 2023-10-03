@@ -90,6 +90,7 @@
 
 <script>
     getPh();
+    accessCheck();
 
     function getPh(){
         $.ajax({
@@ -98,6 +99,15 @@
                 $.each(res, (i, e) => {
                     $(`.phSection.\${e.target}`).prop('href', `\${e.target}:\${e.ph}`);
                 });
+            },
+            error: console.log
+        })
+    }
+
+    function accessCheck(){
+        $.ajax({
+            url : "<c:url value='/setting/accessCheck'/>",
+            success(res){
             },
             error: console.log
         })

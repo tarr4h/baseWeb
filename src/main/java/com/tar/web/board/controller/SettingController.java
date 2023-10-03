@@ -55,6 +55,36 @@ public class SettingController {
 		}
 	}
 
+	@GetMapping(value = "accessCnt")
+	public String accessCnt(Model model){
+		int dailyCnt = service.getAccessCnt();
+		model.addAttribute("accessCnt", dailyCnt);
+		return "setting/accessCnt";
+	}
+
+	@GetMapping(value = "accessCheck")
+	public ResponseEntity<?> accessCheck(@RequestParam Map<String, Object> param, HttpServletRequest request){
+		String ip = request.getHeader("X-FORWARDED-FOR");
+
+		//proxy 환경일 경우
+		if (ip == null || ip.length() == 0) {
+			ip = request.getHeader("Proxy-Client-IP");
+		}
+
+		//웹로직 서버일 경우
+		if (ip == null || ip.length() == 0) {
+			ip = request.getHeader("WL-Proxy-Client-IP");
+		}
+
+		if (ip == null || ip.length() == 0) {
+			ip = request.getRemoteAddr() ;
+		}
+		log.debug("ip addr = {}", ip);
+		service.userChecker(ip);
+		log.debug("go home");
+		return ResponseEntity.ok(true);
+	}
+
 	@PostMapping(value = "updatePh")
 	public ResponseEntity<?> updatePh(@RequestBody Map<String, Object> param){
 		log.debug("param = {}", param);

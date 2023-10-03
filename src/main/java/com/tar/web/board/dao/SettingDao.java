@@ -18,4 +18,12 @@ public interface SettingDao {
     int updatePh(Map<String, Object> param);
 
     int chkAdmin(Map<String, Object> param);
+
+    int selectTodayAccess(String ip);
+
+    int insertAccessIp(String ip);
+
+    int updateAccessIp(String ip);
+
+    int getAccessCnt();
 }
